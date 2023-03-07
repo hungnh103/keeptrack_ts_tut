@@ -1,14 +1,15 @@
 import { Project } from './Project'
 
 interface ProjectCardProps {
-  project: Project
+  project: Project,
+  onEdit: (project: Project) => void
 }
 
 const formatDescText = (desc: string): string => (`${desc.slice(0, 60)}...`)
 
-const ProjectCard = ({ project }: ProjectCardProps) => {
+const ProjectCard = ({ project, onEdit }: ProjectCardProps) => {
   const handleEditClick = (projectBeingEdited: Project) => {
-    console.log(projectBeingEdited)
+    onEdit(projectBeingEdited)
   }
 
   return (

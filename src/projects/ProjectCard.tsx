@@ -5,7 +5,11 @@ interface ProjectCardProps {
   onEdit: (project: Project) => void
 }
 
-const formatDescText = (desc: string): string => (`${desc.slice(0, 60)}...`)
+const formatDescText = (desc: string): string => (
+  desc.length > 60
+    ? `${desc.slice(0, 60)}...`
+    : desc
+)
 
 const ProjectCard = ({ project, onEdit }: ProjectCardProps) => {
   const handleEditClick = (projectBeingEdited: Project) => {
@@ -19,7 +23,9 @@ const ProjectCard = ({ project, onEdit }: ProjectCardProps) => {
         <h5 className='strong'>
           <strong>{project.name}</strong>
         </h5>
-        <p>{formatDescText(project.description)}</p>
+        <p style={{wordWrap: 'break-word'}}>
+          {formatDescText(project.description)}
+        </p>
         <p>Budget: {project.budget.toLocaleString()}</p>
 
         <button

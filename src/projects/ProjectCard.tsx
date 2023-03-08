@@ -21,7 +21,7 @@ const ProjectCard = ({ project, onEdit }: ProjectCardProps) => {
       <img src={project.imageUrl} alt={project.name} />
       <section className='section dark'>
         <h5 className='strong'>
-          <strong>{project.name}</strong>
+          <strong>{project.id}. {project.name}</strong>
         </h5>
         <p style={{wordWrap: 'break-word'}}>
           {formatDescText(project.description)}

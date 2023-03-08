@@ -532,13 +532,13 @@
     },
     {
       "id": 54,
-      "name": "Anderson LLC",
+      "name": "Anderson LLC aa hi",
       "description": "Diverse incremental algorithm. Expedita laudantium sit quisquam sit nobis eum nam ea natus.",
       "imageUrl": "/assets/placeimg_500_300_arch10.jpg",
       "contractTypeId": 2,
       "contractSignedOn": "2015-01-21T07:03:49.836Z",
       "budget": 74221,
-      "isActive": true
+      "isActive": false
     },
     {
       "id": 55,
@@ -768,7 +768,7 @@
       "contractTypeId": 6,
       "contractSignedOn": "2018-08-16T18:49:06.477Z",
       "budget": 98123,
-      "isActive": false
+      "isActive": true
     },
     {
       "id": 78,

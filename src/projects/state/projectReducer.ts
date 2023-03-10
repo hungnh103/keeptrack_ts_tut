@@ -70,9 +70,9 @@ export function projectReducer(
     case DELETE_PROJECT_SUCCESS:
       return {
         ...state,
-        projects: state.projects.filter((project: Project) => {
-          project.id !== action.payload.id
-        })
+        projects: state.projects.filter(
+          (project: Project) => project.id !== action.payload.id
+        )
       }
     case DELETE_PROJECT_FAILURE:
       return { ...state, error: action.payload.message }

@@ -1,10 +1,11 @@
 # Keeptrack Tutorial
 
-## Guideline Page
+## Guideline
 https://handsonreact.com/docs/labs/react-tutorial-typescript
 
 ## Install
 ```sh
+npm test
 npm run api
 npm start
 ```

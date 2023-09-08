@@ -75,7 +75,12 @@ const ProjectForm = ({
   }
 
   return (
-    <form className='input-group vertical' onSubmit={handleSubmit}>
+    <form
+      aria-label='Edit a Project'
+      name='projectForm'
+      className='input-group vertical'
+      onSubmit={handleSubmit}
+    >
       <label htmlFor="name">Project name</label>
       <input
         id='name'
@@ -133,6 +138,7 @@ const ProjectForm = ({
         <button className='primary bordered medium'>Save</button>
         <span></span>
         <button
+          aria-label='cancel'
           type='button'
           className='bordered medium'
           onClick={onCancel}

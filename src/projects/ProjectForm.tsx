@@ -84,6 +84,7 @@ const ProjectForm = ({
       <label htmlFor="name">Project name</label>
       <input
         id='name'
+        aria-label='project name'
         type="text"
         name='name'
         placeholder='enter name'
@@ -91,7 +92,7 @@ const ProjectForm = ({
         onChange={handleChange}
       />
       {errors.name.length > 0 && (
-        <div className='card error'>
+        <div className='card error' role='alert'>
           <p>{errors.name}</p>
         </div>
       )}
@@ -99,13 +100,14 @@ const ProjectForm = ({
       <label htmlFor="description">Description</label>
       <textarea
         id='description'
+        aria-label='project description'
         name="description"
         placeholder='enter description'
         value={project.description}
         onChange={handleChange}
       ></textarea>
       {errors.description.length > 0 &&(
-        <div className='card error'>
+        <div className='card error' role='alert'>
           <p>{errors.description}</p>
         </div>
       )}
@@ -113,6 +115,7 @@ const ProjectForm = ({
       <label htmlFor="budget">Budget</label>
       <input
         id='budget'
+        aria-label='project budget'
         type="number"
         name='budget'
         placeholder='enter budget'
@@ -120,7 +123,7 @@ const ProjectForm = ({
         onChange={handleChange}
       />
       {errors.budget.length > 0 && (
-        <div className='card error'>
+        <div className='card error' role='alert'>
           <p>{errors.budget}</p>
         </div>
       )}

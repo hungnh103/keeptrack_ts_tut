@@ -32,6 +32,7 @@ const ProjectCard = ({ project, onEdit }: ProjectCardProps) => {
         </Link>
 
         <button
+          aria-label={`edit ${project.name}`}
           className='bordered'
           onClick={() => {
             handleEditClick(project)
